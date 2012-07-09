@@ -1,0 +1,13 @@
+# File managed by Puppet
+
+# Addresses to listen on (ntpd does not listen by default)
+<% if scope.lookupvar('openntpd::server_local') == "yes" -%>
+listen on *
+<% else -%>
+#listen on *
+<% end -%>
+
+#NTP servers to use
+<% scope.lookupvar('openntpd::server').each do |ntp| -%>
+server <%= ntp %>
+<% end -%>

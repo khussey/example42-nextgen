@@ -1,0 +1,11 @@
+# File Managed by Puppet
+# /etc/default/openntpd
+
+# Uncomment to set the system time when starting in case the offset
+# between the local clock and the servers is more than 180 seconds.
+# For other options, see man ntpd(8).
+<% if scope.lookupvar('openntpd::bool_force_startup_sync') == true -%>
+DAEMON_OPTS="-s"
+<% else -%>
+# DAEMON_OPTS="-s"
+<% end -%>

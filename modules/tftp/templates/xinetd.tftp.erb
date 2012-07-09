@@ -1,0 +1,18 @@
+# File Managed by Puppet
+service tftp
+{
+	socket_type		= dgram
+	protocol		= udp
+	wait			= yes
+	user			= <%= scope.lookupvar('tftp::process_user') %>
+	server			= /usr/sbin/<%= scope.lookupvar('tftp::process') %>
+	server_args		= -s <%= scope.lookupvar('tftp::data_dir') %>
+<% if scope.lookupvar('tftp::manage_service_enable') == true -%>
+	disable			= no
+<% else -%>
+	disable			= yes
+<% end -%>
+	per_source		= 11
+	cps			= 100 2
+	flags			= IPv4
+}

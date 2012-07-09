@@ -1,0 +1,36 @@
+# File Managed by Puppet
+
+remote <%= remote %> <%= port %>
+proto <%= real_proto %>
+dev <%= dev %>
+<% if route != '' %>route <%= route %><% end -%>
+resolv-retry infinite
+nobind
+
+persist-key
+persist-tun
+<% if auth_type == "key" -%>
+client
+secret <%= scope.lookupvar("openvpn::config_dir") %>/<%= name %>.key 
+<% end -%>
+<% if auth_type == "tls-client" -%>
+tls-client
+ca ca.crt
+cert <%= hostname %>.crt
+key <%= hostname %>.key
+tls-client
+pull
+<% end -%>
+
+ns-cert-type server
+verb 3
+;mute 20
+user <%= scope.lookupvar("openvpn::process_user") %>
+group <%= scope.lookupvar("openvpn::process_user") %>
+
+keepalive 10 60
+inactive 0
+# cipher x
+# comp-lzo # Compress data
+# client-connect /etc/openvpn/script/client_connect
+# client-disconnect /etc/openvpn/script/client_disconnect

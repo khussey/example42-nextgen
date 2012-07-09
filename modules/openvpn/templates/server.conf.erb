@@ -1,0 +1,33 @@
+# File Managed by Puppet
+
+mode server
+port <%= port %>
+proto <%= real_proto %>
+dev <%= dev %>
+<% if route != '' %>route <%= route %><% end -%>
+<% if push != '' %>push <%= push %><% end -%>
+
+<% if auth_type == "key" -%>
+secret <%= scope.lookupvar("openvpn::config_dir") %>/<%= name %>.key 
+<% end -%>
+<% if auth_type == "tls-server" -%>
+tls-server
+ca ca.crt
+cert <%= hostname %>.crt
+key <%= hostname %>.key
+dh dh1024.pem
+# duplicate-cn
+<% end -%>
+
+# client-config-dir ccd
+
+keepalive 10 60
+inactive 0
+user <%= scope.lookupvar("openvpn::process_user") %>
+group <%= scope.lookupvar("openvpn::process_user") %>
+persist-tun
+persist-key
+verb 4 # From 0 to 15 (max)
+# comp-lzo # Compress data
+# client-connect /etc/openvpn/script/client_connect
+# client-disconnect /etc/openvpn/script/client_disconnect
