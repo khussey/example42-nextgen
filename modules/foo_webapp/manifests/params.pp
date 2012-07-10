@@ -20,7 +20,7 @@ class foo_webapp::params {
   # You may need to change this: use the "install_source" parameter of the foo_webapp class
   $install_source = "http://download.foo_webapp.com/foo_webapp.tar.gz"
  
-  $install_destination = $operatingsystem ? {
+  $install_destination = $::operatingsystem ? {
     /(?i:Debian|Ubuntu|Mint)/ => "/var/www",
     /(?i:Suse|OpenSuse)/      => "/srv/www",
     default                   => "/var/www/html",
@@ -34,39 +34,39 @@ class foo_webapp::params {
 
   $url_pattern         = "OK"
 
-  $package = $operatingsystem ? {
+  $package = $::operatingsystem ? {
     default => "foo_webapp",
   }
 
-  $config_dir = $operatingsystem ? {
+  $config_dir = $::operatingsystem ? {
     default => "/etc/foo_webapp/conf",
   }
 
-  $config_file = $operatingsystem ? {
+  $config_file = $::operatingsystem ? {
     default => "/etc/foo_webapp/foo_webapp.conf",
   } 
 
-  $config_file_mode = $operatingsystem ? { 
+  $config_file_mode = $::operatingsystem ? { 
     default => "0644",
   }
 
-  $config_file_owner = $operatingsystem ? {
+  $config_file_owner = $::operatingsystem ? {
     default => "root",
   }
 
-  $config_file_group = $operatingsystem ? {
+  $config_file_group = $::operatingsystem ? {
     default => "root",
   }
 
-  $data_dir = $operatingsystem ? {
+  $data_dir = $::operatingsystem ? {
     default => "/var/lib/foo_webapp",
   }
 
-  $log_dir = $operatingsystem ? {
+  $log_dir = $::operatingsystem ? {
     default => "/var/log",
   }
 
-  $log_file = $operatingsystem ? {
+  $log_file = $::operatingsystem ? {
     default => "/var/log/foo_webapp.log",
   }
 

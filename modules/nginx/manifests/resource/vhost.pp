@@ -89,7 +89,7 @@ define nginx::resource::vhost(
 
   # Use the File Fragment Pattern to construct the configuration files.
   # Create the base configuration file reference.
-  concat_fragment { "${name}+001.tmp":
+  concat::fragment { "${name}+001.tmp":
     content => template('nginx/vhost/vhost_header.erb'),
     ensure  => $ensure,
   }
@@ -107,17 +107,17 @@ define nginx::resource::vhost(
   }
 
   # Create a proper file close stub.
-  concat_fragment { "${name}+699.tmp":
+  concat::fragment { "${name}+699.tmp":
     content => template('nginx/vhost/vhost_footer.erb'),
     ensure  => $ensure,
   }
 
   # Create SSL File Stubs if SSL is enabled
-  concat_fragment { "${name}+700-ssl.tmp":
+  concat::fragment { "${name}+700-ssl.tmp":
     content => template('nginx/vhost/vhost_ssl_header.erb'),
     ensure  => $ssl,
   }
-  concat_fragment { "${name}+999-ssl.tmp":
+  concat::fragment { "${name}+999-ssl.tmp":
     content => template('nginx/vhost/vhost_footer.erb'),
     ensure  => $ssl,
   }

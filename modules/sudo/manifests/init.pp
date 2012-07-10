@@ -158,7 +158,7 @@ class sudo (
       group   => $sudo::config_file_group,
     }
     concat::fragment { 'sudoers_head':
-      ensure  => $ensure,
+      ensure  => $::ensure,
       order   => '01',
       target  => $sudo::config_file,
       content => template('sudo/sudoers_head.erb'),

@@ -22,7 +22,7 @@ class foo_webapp::install inherits foo_webapp {
     }
 
     source: {
-      netinstall { "netinstall_foo_webapp":
+      puppi::netinstall { "netinstall_foo_webapp":
         url                 => "${foo_webapp::install_source}",
         destination_dir     => "${foo_webapp::install_destination}",
         preextract_command  => "${foo_webapp::install_precommand}",

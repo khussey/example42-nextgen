@@ -6,7 +6,7 @@
 class example42::monitor::as {
 
   # Example42 Application checks
-  $local_site = $env ? {
+  $local_site = $::env ? {
     devel => 'latest',
     test  => 'beta',
     prod  => 'www',

@@ -53,7 +53,7 @@ class example42 {
     croncommand  => '/usr/bin/puppet agent --onetime --ignorecache --no-usecacheonfailure',
     postrun_command => '/usr/bin/mailpuppicheck -m roots@example42.com -r 2',
     allow        => ['127.0.0.1','*'],
-    mode         => $role ? {
+    mode         => $::role ? {
       'puppet' => 'server',
       default  => 'client',
     },

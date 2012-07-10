@@ -163,9 +163,9 @@ define puppi::project::git (
 
   # Unless explicitely defined, we assume that the WAR file to use
   # for initialization is the same to use for deploys
-  $init_real_source = $init_source ? {
+  $init_real_source = $::init_source ? {
     ''      => $source,
-    default => $init_source,
+    default => $::init_source,
   }
 
   $bool_keep_gitdata = any2bool($keep_gitdata)

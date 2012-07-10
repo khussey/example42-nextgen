@@ -27,7 +27,7 @@ class yum::prerequisites {
   #gpg key
   file { 'rpm_gpg':
     path   => '/etc/pki/rpm-gpg/',
-    source => "puppet:///modules/yum/${operatingsystem}.${yum::osver[0]}/rpm-gpg/",
+    source => "puppet:///modules/yum/{$::operatingsystem}.{$yum::osver[0]}/rpm-gpg/",
     recurse => true,
 #    purge   => $yum::bool_clean_repos ? {
 #      true  => true,
