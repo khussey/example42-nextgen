@@ -110,12 +110,12 @@ define puppi::project::yum (
 
   # Set default values
   $predeploy_real_user = $predeploy_user ? {
-    ''      => $user,
+    ''      => $::user,
     default => $predeploy_user,
   }
 
   $postdeploy_real_user = $postdeploy_user ? {
-    ''      => $user,
+    ''      => $::user,
     default => $postdeploy_user,
   }
 

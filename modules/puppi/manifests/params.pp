@@ -19,14 +19,14 @@ class puppi::params  {
     $readmedir   = '/var/lib/puppi/readme'
     $logdir      = '/var/log/puppi'
 
-    $archivedir = $puppi_archivedir ? {
+    $archivedir = $::puppi_archivedir ? {
        ''      => '/var/lib/puppi/archive',
-       default => $puppi_archivedir ,
+       default => $::puppi_archivedir ,
     }
 
-    $workdir = $puppi_workdir ? {
+    $workdir = $::puppi_workdir ? {
        ''      => '/tmp/puppi',
-       default => $puppi_workdir ,
+       default => $::puppi_workdir ,
     }
 
     $configfile_mode  = '0644'
@@ -54,9 +54,9 @@ class puppi::params  {
         default                   => 'mailx',
     }
 
-    $ntp = $ntp_server ? {
+    $ntp = $::ntp_server ? {
         ''      => 'pool.ntp.org' ,
-        default => $ntp_server ,
+        default => $::ntp_server ,
     }
 
 # Mcollective paths

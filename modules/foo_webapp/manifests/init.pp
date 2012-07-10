@@ -231,7 +231,7 @@ class foo_webapp (
       url     => "${foo_webapp::url_check}",
       pattern => "${foo_webapp::url_pattern}",
       port    => "${foo_webapp::port}",
-      target  => "${fqdn}",
+      target  => "${::fqdn}",
       tool    => "${foo_webapp::monitor_tool}",
       enable  => $foo_webapp::manage_monitor,
     }

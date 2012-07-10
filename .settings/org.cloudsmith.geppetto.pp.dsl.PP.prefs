@@ -1,0 +1,7 @@
+#Tue Jul 10 20:16:40 UTC 2012
+puppetVersion=2.7
+puppetPath=lib/*\:environments/$environment/*\:manifests/*\:modules/*\:roles/environment/*
+puppetEnvironment=production
+problemInterpolatedHyphen=Warning
+circularModuleDependency=Warning
+missingDefault=Ignore

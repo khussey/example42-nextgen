@@ -15,7 +15,7 @@ class example42::my_apache {
     mode    => '0750',
     owner   => $apache::process_user,
     group   => $apache::process_user,
-    source  => [ "puppet:///modules/example42/apache/example42.htpasswd-${role}" ,
+    source  => [ "puppet:///modules/example42/apache/example42.htpasswd-${::role}" ,
                  'puppet:///modules/example42/apache/example42.htpasswd' ],
   }
 

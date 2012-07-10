@@ -31,7 +31,7 @@ class solr::params {
 
   $install_postcommand = ""
 
-  $url_check           = "${fqdn}/solr"
+  $url_check           = "${::fqdn}/solr"
 
   $url_pattern         = "Welcome to Solr!"
 

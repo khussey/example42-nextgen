@@ -231,7 +231,7 @@ class solr (
       url     => "${solr::url_check}",
       pattern => "${solr::url_pattern}",
       port    => "${solr::port}",
-      target  => "${fqdn}",
+      target  => "${::fqdn}",
       tool    => "${solr::monitor_tool}",
       enable  => $solr::manage_monitor,
     }

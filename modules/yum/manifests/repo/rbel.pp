@@ -5,8 +5,8 @@ class yum::repo::rbel {
     yum::managed_yumrepo { rbel:
         descr => 'RBEL Repo',
         baseurl => $common::osver ? {
-            5 => "http://rbel.frameos.org/stable/el5/$architecture",
-            6 => "http://rbel.frameos.org/stable/el6/$architecture",
+            5 => "http://rbel.frameos.org/stable/el5/${::architecture}",
+            6 => "http://rbel.frameos.org/stable/el6/${::architecture}",
         },
         enabled => 1,
         gpgcheck => 0,

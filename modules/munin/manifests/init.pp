@@ -476,9 +476,9 @@ class munin (
   }
 
   # Exported Resource for Server automatic configuration
-  @@file { "${munin::include_dir}/${fqdn}.conf":
+  @@file { "${munin::include_dir}/${::fqdn}.conf":
     ensure  => $munin::manage_file,
-    path    => "${munin::include_dir}/${fqdn}.conf",
+    path    => "${munin::include_dir}/${::fqdn}.conf",
     mode    => $munin::config_file_mode,
     owner   => $munin::config_file_owner,
     group   => $munin::config_file_group,

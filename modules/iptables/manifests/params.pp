@@ -82,9 +82,9 @@ class iptables::params  {
   ## FILE SERVING SOURCE
   case $::base_source {
     '': {
-      $general_base_source = $puppetversion ? {
+      $general_base_source = $::puppetversion ? {
         /(^0.25)/ => 'puppet:///modules',
-        /(^0.)/   => "puppet://$servername",
+        /(^0.)/   => "puppet://${::servername}",
         default   => 'puppet:///modules',
       }
     }
