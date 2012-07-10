@@ -101,24 +101,24 @@
 #    }
 #
 define jboss::instance (
-  user          = 'jboss',
-  userid        = '',
-  group         = 'jboss',
-  groupid       = '',
-  createuser    = true,
-  template      = 'default',
-  bindaddr      = '127.0.0.1',
-  port          = '8080',
-  run_conf      = '',
-  conf_dir      = '',
-  deploy_dir    = '',
-  deployers_dir = '',
-  init_template = 'jboss/jboss.init-instance.erb',
-  enable        = true
+  $user          = 'jboss',
+  $userid        = '',
+  $group         = 'jboss',
+  $groupid       = '',
+  $createuser    = true,
+  $template      = 'default',
+  $bindaddr      = '127.0.0.1',
+  $port          = '8080',
+  $run_conf      = '',
+  $conf_dir      = '',
+  $deploy_dir    = '',
+  $deployers_dir = '',
+  $init_template = 'jboss/jboss.init-instance.erb',
+  $enable        = true
   ) {
 
   require jboss::params
-  $bool_createuser=any2bool($create_user)
+  $bool_createuser=any2bool($createuser)
   $bool_enable=any2bool($enable)
   $ensure=bool2ensure($enable)
 
@@ -246,18 +246,18 @@ define jboss::instance (
   }
 
   # Automatic monitoring, if enabled
-  if $bool_monitor == true {
+  if $::bool_monitor == true {
     monitor::port { "jboss_${jboss::protocol}_${port}": 
       protocol => $jboss::protocol,
       port     => $port,
       target   => $bindaddr,
       enable   => $enable,
-      tool     => $monitor_tool,
+      tool     => $::monitor_tool,
     }
   }
 
   # Puppi addons, if puppi is enabled
-  if ($puppi == "yes") and ($enable == true) {
+  if ($::puppi == "yes") and ($enable == true) {
   }
 
 }

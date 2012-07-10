@@ -216,7 +216,7 @@ class yum (
   if $yum::extrarepo =~ /tmz/ and $osver[0] != "4" { include yum::repo::tmz }
   if $yum::extrarepo =~ /puppetlabs/ and $osver[0] != "4" { include yum::repo::puppetlabs }
 
-  case $operatingsystem {
+  case $::operatingsystem {
 
   centos: {
     if $osver[0] == "6" { include yum::repo::centos6 }

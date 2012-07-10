@@ -12,7 +12,7 @@ class wget {
 # Definition: wget::fetch
 #
 # This class will download files from the internet.  You may define a web proxy
-# using $http_proxy if necessary.
+# using $::http_proxy if necessary.
 #
 ################################################################################
 define wget::fetch($source,$destination,$timeout="0") {
@@ -21,8 +21,8 @@ define wget::fetch($source,$destination,$timeout="0") {
 	# on empty files.
 	# wget creates an empty file when a download fails, and then it wouldn't try
 	# again to download the file
-	if $http_proxy {
-		$environment = [ "HTTP_PROXY=$http_proxy", "http_proxy=$http_proxy" ]
+	if $::http_proxy {
+		$environment = [ "HTTP_PROXY=$::http_proxy", "http_proxy=$::http_proxy" ]
 	}
 	else {
 		$environment = []
@@ -39,13 +39,13 @@ define wget::fetch($source,$destination,$timeout="0") {
 # Definition: wget::authfetch
 #
 # This class will download files from the internet.  You may define a web proxy
-# using $http_proxy if necessary. Username must be provided. And the user's
+# using $::http_proxy if necessary. Username must be provided. And the user's
 # password must be stored in the password variable within the .wgetrc file.
 #
 ################################################################################
 define wget::authfetch($source,$destination,$user,$password="",$timeout="0") {
-	if $http_proxy {
-		$environment = [ "HTTP_PROXY=$http_proxy", "http_proxy=$http_proxy", "WGETRC=/tmp/wgetrc-$name" ]
+	if $::http_proxy {
+		$environment = [ "HTTP_PROXY=$::http_proxy", "http_proxy=$::http_proxy", "WGETRC=/tmp/wgetrc-$name" ]
 	}
 	else {
 		$environment = [ "WGETRC=/tmp/wgetrc-$name" ]

@@ -15,11 +15,11 @@
 class postgresql::params {
 
   ### Module's specific parameters
-  $initdbcommand = $operatingsystem ? {
+  $initdbcommand = $::operatingsystem ? {
     default => 'service postgresql initdb',
   }
 
-  $configfilehba = $operatingsystem ? {
+  $configfilehba = $::operatingsystem ? {
     /(?i:Debian|Ubuntu|Mint)/ => '/etc/postgresql/8.4/main/pg_hba.conf',
     default => '/var/lib/pgsql/data/pg_hba.conf',
   }

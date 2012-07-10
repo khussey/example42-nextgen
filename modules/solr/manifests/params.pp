@@ -14,7 +14,7 @@
 class solr::params {
 
   # Default installation type depends on OS package availability
-  $install = $operatingsystem ? {
+  $install = $::operatingsystem ? {
     /(?i:Ubuntu|Debian|Mint)/ => "package",
     default       => "source",
   }
@@ -23,7 +23,7 @@ class solr::params {
   # You may need to change this: use the "install_source" parameter of the solr class
   $install_source = "http://www.apache.org/dist/lucene/solr/3.4.0/apache-solr-3.4.0.tgz"
 
-  $install_destination = $operatingsystem ? {
+  $install_destination = $::operatingsystem ? {
     default                   => "/opt/solr",
   }
 
@@ -35,40 +35,40 @@ class solr::params {
 
   $url_pattern         = "Welcome to Solr!"
 
-  $package = $operatingsystem ? {
+  $package = $::operatingsystem ? {
     /(?i:Ubuntu|Debian|Mint)/ => "solr-tomcat",
     default => "solr",
   }
 
-  $config_dir = $operatingsystem ? {
+  $config_dir = $::operatingsystem ? {
     default => "/etc/solr/conf",
   }
 
-  $config_file = $operatingsystem ? {
+  $config_file = $::operatingsystem ? {
     default => "/etc/solr/conf/solrconfig.xml",
   } 
 
-  $config_file_mode = $operatingsystem ? { 
+  $config_file_mode = $::operatingsystem ? { 
     default => "0644",
   }
 
-  $config_file_owner = $operatingsystem ? {
+  $config_file_owner = $::operatingsystem ? {
     default => "root",
   }
 
-  $config_file_group = $operatingsystem ? {
+  $config_file_group = $::operatingsystem ? {
     default => "root",
   }
 
-  $data_dir = $operatingsystem ? {
+  $data_dir = $::operatingsystem ? {
     default => "/var/lib/solr",
   }
 
-  $log_dir = $operatingsystem ? {
+  $log_dir = $::operatingsystem ? {
     default => "/var/log",
   }
 
-  $log_file = $operatingsystem ? {
+  $log_file = $::operatingsystem ? {
     default => "/var/log/solr.log",
   }
 

@@ -24,7 +24,7 @@ define monitor::mount (
   $group      ='root',
   $mode       ='0755',
   $enable     =true,
-  $tool       =$monitor_tool
+  $tool       =$::monitor_tool
   ) {
 
   $bool_enable=any2bool($enable)

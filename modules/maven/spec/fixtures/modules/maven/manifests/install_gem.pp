@@ -1,4 +1,4 @@
-define maven::install-gem ($version = '') {
+define maven::install_gem ($version = '') {
     exec { "gem $name $version":
       path        => '/usr/bin:/opt/ruby/bin',
       environment => "JAVA_HOME=$maven::java_home",

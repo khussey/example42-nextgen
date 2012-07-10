@@ -25,13 +25,13 @@ class puppet::server::mysql {
         mysql_user       => $puppet::db_user,
         mysql_password   => $puppet::db_password,
         mysql_privileges => 'ALL',
-        mysql_host       => $fqdn,
+        mysql_host       => $::fqdn,
         tag              => "mysql_grants_${puppet::db_server}",
       }
     }
   }
 
-  case $operatingsystem {
+  case $::operatingsystem {
     ubuntu,debian: {
       package { 'libmysql-ruby':
         ensure => present,

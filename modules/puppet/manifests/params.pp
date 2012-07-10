@@ -205,14 +205,14 @@ class puppet::params {
 
   ### FILE SERVING SOURCE
   # Sets the correct source for static files - Needed for backwards compatibility
-  case $base_source {
+  case $::base_source {
     '': { $general_base_source = $puppetversion ? {
       /(^0.25)/ => "puppet:///modules",
       /(^0.)/   => "puppet://$servername",
       default   => "puppet:///modules",
     }
   }
-    default: { $general_base_source=$base_source }
+    default: { $general_base_source=$::base_source }
   }
 
 }

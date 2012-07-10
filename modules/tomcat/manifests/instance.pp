@@ -334,15 +334,15 @@ define tomcat::instance (
       service  => "tomcat-${instance_name}",
       pidfile  => "${instance_rundir}/tomcat-${instance_name}.pid",
       enable   => true,
-      tool     => $monitor_tool,
+      tool     => $::monitor_tool,
     }
 
     monitor::port { "tomcat_tcp_$httpport":
       protocol => 'tcp',
       port     => $httpport,
-      target   => $fqdn,
+      target   => $::fqdn,
       enable   => true,
-      tool     => $monitor_tool,
+      tool     => $::monitor_tool,
     }
   }
   if $puppi == true {

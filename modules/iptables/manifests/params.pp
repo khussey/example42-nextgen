@@ -80,7 +80,7 @@ class iptables::params  {
   $audit_only = false
 
   ## FILE SERVING SOURCE
-  case $base_source {
+  case $::base_source {
     '': {
       $general_base_source = $puppetversion ? {
         /(^0.25)/ => 'puppet:///modules',
@@ -88,7 +88,7 @@ class iptables::params  {
         default   => 'puppet:///modules',
       }
     }
-    default: { $general_base_source=$base_source }
+    default: { $general_base_source=$::base_source }
   }
 
 }
