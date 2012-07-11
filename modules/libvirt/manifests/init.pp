@@ -348,7 +348,7 @@ class libvirt (
 
   service { 'libvirt_guests':
     ensure     => $libvirt::manage_service_ensure,
-    name       => $libvirt::service_guests,
+    name       => $libvirt::params::service_guests,
     enable     => $libvirt::manage_service_enable,
     hasstatus  => $libvirt::service_status,
     pattern    => $libvirt::process,

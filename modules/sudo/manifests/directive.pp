@@ -44,9 +44,9 @@ define sudo::directive (
   }
 
 
-  if $sudo::config_dir {
+  if $sudo::params::config_dir {
 
-    file { "${sudo::config_dir}/${order}_${dname}":
+    file { "${sudo::params::config_dir}/${order}_${dname}":
       ensure  => $ensure,
       owner   => root,
       group   => root,
@@ -71,7 +71,7 @@ define sudo::directive (
   }
 
   exec { "sudo-syntax-check for file $dname":
-    command     => "visudo -c -f ${sudo::config_dir}/${order}_${dname} || ( rm -f ${sudo::config_dir}/${order}_${dname} && exit 1)",
+    command     => "visudo -c -f ${sudo::params::config_dir}/${order}_${dname} || ( rm -f ${sudo::params::config_dir}/${order}_${dname} && exit 1)",
     refreshonly => true,
     path        => '/bin:/usr/bin:/sbin:/usr/sbin',
   }

@@ -404,8 +404,8 @@ class xinetd (
   ### Firewall management, if enabled ( firewall => true )
   if $xinetd::bool_firewall == true {
     firewall { "xinetd_${xinetd::protocol}_${xinetd::port}":
-      source      => $xinetd::firewall_source,
-      destination => $xinetd::firewall_destination,
+      source      => $xinetd::firewall_src,
+      destination => $xinetd::firewall_dst,
       protocol    => $xinetd::protocol,
       port        => $xinetd::port,
       action      => 'allow',

@@ -135,11 +135,11 @@ class sudo (
     audit   => $sudo::manage_audit,
   }
 
-  if $sudo::config_dir {
+  if $sudo::params::config_dir {
     # The whole sudo configuration directory can be recursively overriden
     file { 'sudo.dir':
       ensure  => directory,
-      path    => $sudo::config_dir,
+      path    => $sudo::params::config_dir,
       require => Package['sudo'],
       source  => $sudo::source_dir,
       recurse => true,

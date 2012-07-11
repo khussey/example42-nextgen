@@ -302,7 +302,7 @@ class wordpress (
 
   ### Calculations of variables whoe value depends on different params
   $real_install_destination = $wordpress::install_destination ? { 
-    ''      => $wordpress::webserver ? {
+    ''      => $wordpress::web_server ? {
       default => $::operatingsystem ? {
         /(?i:Debian|Ubuntu|Mint)/ => '/var/www',
         /(?i:Suse|OpenSuse)/      => '/srv/www',
