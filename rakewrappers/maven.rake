@@ -9,4 +9,4 @@ namespace :maven do
   load 'Rakefile'
 end
 
-task :default => ['ci:setup:rspec', 'maven:test']
+task :default => ['ci:setup:rspec', 'maven:spec']
