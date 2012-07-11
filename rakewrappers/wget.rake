@@ -9,4 +9,4 @@ namespace :wget do
   load 'Rakefile'
 end
 
-task :default => ['ci:setup:rspec', 'wget:test']
+task :default => ['ci:setup:rspec', 'wget:spec']
