@@ -17,10 +17,373 @@
       "outputs": [
         {
           "location": "modules/apache/spec/reports",
-          "name": "Apache Module Test Results"
+          "name": "apache module test results"
         }
       ],
       "name": "apache"
+    },
+    {
+      "rakeFile": "rakewrappers/foo.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/foo/spec/reports",
+          "name": "foo module test results"
+        }
+      ],
+      "name": "foo"
+    },
+    {
+      "rakeFile": "rakewrappers/foreman.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/foreman/spec/reports",
+          "name": "foreman module test results"
+        }
+      ],
+      "name": "foreman"
+    },
+    {
+      "rakeFile": "rakewrappers/haproxy.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/haproxy/spec/reports",
+          "name": "haproxy module test results"
+        }
+      ],
+      "name": "haproxy"
+    },
+    {
+      "rakeFile": "rakewrappers/jboss.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/jboss/spec/reports",
+          "name": "jboss module test results"
+        }
+      ],
+      "name": "jboss"
+    },
+    {
+      "rakeFile": "rakewrappers/jenkins.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/jenkins/spec/reports",
+          "name": "jenkins module test results"
+        }
+      ],
+      "name": "jenkins"
+    },
+    {
+      "rakeFile": "rakewrappers/libvirt.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/libvirt/spec/reports",
+          "name": "libvirt module test results"
+        }
+      ],
+      "name": "libvirt"
+    },
+    {
+      "rakeFile": "rakewrappers/maven.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/maven/spec/reports",
+          "name": "maven module test results"
+        }
+      ],
+      "name": "maven"
+    },
+    {
+      "rakeFile": "rakewrappers/munin.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/munin/spec/reports",
+          "name": "munin module test results"
+        }
+      ],
+      "name": "munin"
+    },
+    {
+      "rakeFile": "rakewrappers/mysql.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/mysql/spec/reports",
+          "name": "mysql module test results"
+        }
+      ],
+      "name": "mysql"
+    },
+    {
+      "rakeFile": "rakewrappers/nginx.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/nginx/spec/reports",
+          "name": "nginx module test results"
+        }
+      ],
+      "name": "nginx"
+    },
+    {
+      "rakeFile": "rakewrappers/nrpe.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/nrpe/spec/reports",
+          "name": "nrpe module test results"
+        }
+      ],
+      "name": "nrpe"
+    },
+    {
+      "rakeFile": "rakewrappers/ntp.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/ntp/spec/reports",
+          "name": "ntp module test results"
+        }
+      ],
+      "name": "ntp"
+    },
+    {
+      "rakeFile": "rakewrappers/openntpd.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/openntpd/spec/reports",
+          "name": "openntpd module test results"
+        }
+      ],
+      "name": "openntpd"
+    },
+    {
+      "rakeFile": "rakewrappers/openssh.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/openssh/spec/reports",
+          "name": "openssh module test results"
+        }
+      ],
+      "name": "openssh"
+    },
+    {
+      "rakeFile": "rakewrappers/openvpn.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/openvpn/spec/reports",
+          "name": "openvpn module test results"
+        }
+      ],
+      "name": "openvpn"
+    },
+    {
+      "rakeFile": "rakewrappers/orientdb.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/orientdb/spec/reports",
+          "name": "orientdb module test results"
+        }
+      ],
+      "name": "orientdb"
+    },
+    {
+      "rakeFile": "rakewrappers/php.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/php/spec/reports",
+          "name": "php module test results"
+        }
+      ],
+      "name": "php"
+    },
+    {
+      "rakeFile": "rakewrappers/postfix.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/postfix/spec/reports",
+          "name": "postfix module test results"
+        }
+      ],
+      "name": "postfix"
+    },
+    {
+      "rakeFile": "rakewrappers/postgresql.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/postgresql/spec/reports",
+          "name": "postgresql module test results"
+        }
+      ],
+      "name": "postgresql"
+    },
+    {
+      "rakeFile": "rakewrappers/puppet.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/puppet/spec/reports",
+          "name": "puppet module test results"
+        }
+      ],
+      "name": "puppet"
+    },
+    {
+      "rakeFile": "rakewrappers/puppetdashboard.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/puppetdashboard/spec/reports",
+          "name": "puppetdashboard module test results"
+        }
+      ],
+      "name": "puppetdashboard"
+    },
+    {
+      "rakeFile": "rakewrappers/puppetdb.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/puppetdb/spec/reports",
+          "name": "puppetdb module test results"
+        }
+      ],
+      "name": "puppetdb"
+    },
+    {
+      "rakeFile": "rakewrappers/puppi.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/puppi/spec/reports",
+          "name": "puppi module test results"
+        }
+      ],
+      "name": "puppi"
+    },
+    {
+      "rakeFile": "rakewrappers/redis.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/redis/spec/reports",
+          "name": "redis module test results"
+        }
+      ],
+      "name": "redis"
+    },
+    {
+      "rakeFile": "rakewrappers/resolver.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/resolver/spec/reports",
+          "name": "resolver module test results"
+        }
+      ],
+      "name": "resolver"
+    },
+    {
+      "rakeFile": "rakewrappers/splunk.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/splunk/spec/reports",
+          "name": "splunk module test results"
+        }
+      ],
+      "name": "splunk"
+    },
+    {
+      "rakeFile": "rakewrappers/stdlib.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/stdlib/spec/reports",
+          "name": "stdlib module test results"
+        }
+      ],
+      "name": "stdlib"
+    },
+    {
+      "rakeFile": "rakewrappers/tftp.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/tftp/spec/reports",
+          "name": "tftp module test results"
+        }
+      ],
+      "name": "tftp"
+    },
+    {
+      "rakeFile": "rakewrappers/tomcat.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/tomcat/spec/reports",
+          "name": "tomcat module test results"
+        }
+      ],
+      "name": "tomcat"
+    },
+    {
+      "rakeFile": "rakewrappers/vsftpd.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/vsftpd/spec/reports",
+          "name": "vsftpd module test results"
+        }
+      ],
+      "name": "vsftpd"
+    },
+    {
+      "rakeFile": "rakewrappers/wget.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/wget/spec/reports",
+          "name": "wget module test results"
+        }
+      ],
+      "name": "wget"
+    },
+    {
+      "rakeFile": "rakewrappers/wordpress.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/wordpress/spec/reports",
+          "name": "wordpress module test results"
+        }
+      ],
+      "name": "wordpress"
+    },
+    {
+      "rakeFile": "rakewrappers/xinetd.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/xinetd/spec/reports",
+          "name": "xinetd module test results"
+        }
+      ],
+      "name": "xinetd"
     }
   ]
 }
