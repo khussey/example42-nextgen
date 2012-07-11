@@ -17,7 +17,7 @@ class puppi {
     mode    => '0644',
     owner   => $puppi::params::configfile_owner,
     group   => $puppi::params::configfile_group,
-    content => template('puppi.conf.erb'),
+    content => template('puppi/puppi.conf.erb'),
     before  => Class['puppi::is_installed'],
     require => File['puppi_basedir'],
   }
