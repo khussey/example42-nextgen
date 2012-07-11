@@ -9,4 +9,4 @@ namespace :apache do
   load 'Rakefile'
 end
 
-task :default => ['ci:setup:rspec', 'apache:spec']
+task :default => ['ci:setup:rspec', 'apache:test']
