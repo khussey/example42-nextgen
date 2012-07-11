@@ -9,5 +9,18 @@
       ],
       "name": "production"
     }
+  ],
+  "tests": [
+    {
+      "rakeFile": "rakewrappers/apache.rake",
+      "rakeTask": "default",
+      "outputs": [
+        {
+          "location": "modules/apache/spec/reports",
+          "name": "Apache Module Test Results"
+        }
+      ],
+      "name": "apache"
+    }
   ]
 }
