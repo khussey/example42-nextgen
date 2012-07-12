@@ -21,7 +21,7 @@ end
 #  just yet.
 require 'puppet_spec/files'
 
-require 'puppet_spec_helper'
+require 'puppetlabs_spec_helper/puppet_spec_helper'
 
 
 RSpec.configure do |config|
