@@ -1,14 +1,8 @@
-#Mon Jul 16 15:15:29 UTC 2012
-SelectDefaultLast=Ignore
-booleansInStringForm=Warning
-unquotedResourceTitle=Ignore
-dqStringNotRequiredVar=Ignore
+#Mon Jul 16 15:24:33 UTC 2012
+booleansInStringForm=Ignore
 puppetPath=lib/*\:environments/$environment/*\:manifests/*\:modules/*\:roles/environment/*
-CaseDefaultLast=Ignore
 puppetEnvironment=production
 missingDefault=Ignore
-circularModuleDependency=Ignore
-unbracedInterpolation=Ignore
-problemInterpolatedHyphen=Ignore
+circularModuleDependency=Warning
+problemInterpolatedHyphen=Warning
 puppetVersion=2.7
-dqStringNotRequired=Ignore

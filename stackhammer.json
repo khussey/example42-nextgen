@@ -1,5 +1,6 @@
 {
   "metaVersion": "1.1.4",
+  "newRelicLicense": "32cf65bdf57c2b882571487756b1ebaa92f170cd",
   "puppetVersion": "PUPPET27",
   "environments": [
     {
