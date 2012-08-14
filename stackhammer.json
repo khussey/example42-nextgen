@@ -1,5 +1,5 @@
 {
-  "metaVersion": "1.1.4",
+  "metaVersion": "1.1.5",
   "newRelicLicense": "32cf65bdf57c2b882571487756b1ebaa92f170cd",
   "puppetVersion": "PUPPET27",
   "environments": [
@@ -13,8 +13,9 @@
   ],
   "tests": [
     {
-      "rakeFile": "rakewrappers/apache.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/apache/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/apache/spec/reports",
@@ -24,8 +25,9 @@
       "name": "apache"
     },
     {
-      "rakeFile": "rakewrappers/foo.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/foo/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/foo/spec/reports",
@@ -35,8 +37,9 @@
       "name": "foo"
     },
     {
-      "rakeFile": "rakewrappers/foreman.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/foreman/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/foreman/spec/reports",
@@ -46,8 +49,9 @@
       "name": "foreman"
     },
     {
-      "rakeFile": "rakewrappers/haproxy.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/haproxy/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/haproxy/spec/reports",
@@ -57,8 +61,9 @@
       "name": "haproxy"
     },
     {
-      "rakeFile": "rakewrappers/jboss.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/jboss/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/jboss/spec/reports",
@@ -68,8 +73,9 @@
       "name": "jboss"
     },
     {
-      "rakeFile": "rakewrappers/jenkins.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/jenkins/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/jenkins/spec/reports",
@@ -79,8 +85,9 @@
       "name": "jenkins"
     },
     {
-      "rakeFile": "rakewrappers/libvirt.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/libvirt/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/libvirt/spec/reports",
@@ -90,8 +97,9 @@
       "name": "libvirt"
     },
     {
-      "rakeFile": "rakewrappers/maven.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/maven/Rakefile",
+      "rakeTask": "spec",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/maven/spec/reports",
@@ -101,8 +109,9 @@
       "name": "maven"
     },
     {
-      "rakeFile": "rakewrappers/munin.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/munin/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/munin/spec/reports",
@@ -112,8 +121,9 @@
       "name": "munin"
     },
     {
-      "rakeFile": "rakewrappers/mysql.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/mysql/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/mysql/spec/reports",
@@ -123,8 +133,9 @@
       "name": "mysql"
     },
     {
-      "rakeFile": "rakewrappers/nginx.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/nginx/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/nginx/spec/reports",
@@ -134,8 +145,9 @@
       "name": "nginx"
     },
     {
-      "rakeFile": "rakewrappers/nrpe.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/nrpe/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/nrpe/spec/reports",
@@ -145,8 +157,9 @@
       "name": "nrpe"
     },
     {
-      "rakeFile": "rakewrappers/ntp.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/ntp/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/ntp/spec/reports",
@@ -156,8 +169,9 @@
       "name": "ntp"
     },
     {
-      "rakeFile": "rakewrappers/openntpd.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/openntpd/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/openntpd/spec/reports",
@@ -167,8 +181,9 @@
       "name": "openntpd"
     },
     {
-      "rakeFile": "rakewrappers/openssh.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/openssh/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/openssh/spec/reports",
@@ -178,8 +193,9 @@
       "name": "openssh"
     },
     {
-      "rakeFile": "rakewrappers/openvpn.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/openvpn/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/openvpn/spec/reports",
@@ -189,8 +205,9 @@
       "name": "openvpn"
     },
     {
-      "rakeFile": "rakewrappers/orientdb.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/orientdb/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/orientdb/spec/reports",
@@ -200,8 +217,9 @@
       "name": "orientdb"
     },
     {
-      "rakeFile": "rakewrappers/php.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/php/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/php/spec/reports",
@@ -211,8 +229,9 @@
       "name": "php"
     },
     {
-      "rakeFile": "rakewrappers/postfix.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/postfix/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/postfix/spec/reports",
@@ -222,8 +241,9 @@
       "name": "postfix"
     },
     {
-      "rakeFile": "rakewrappers/postgresql.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/postgresql/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/postgresql/spec/reports",
@@ -233,8 +253,9 @@
       "name": "postgresql"
     },
     {
-      "rakeFile": "rakewrappers/puppet.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/puppet/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/puppet/spec/reports",
@@ -244,8 +265,9 @@
       "name": "puppet"
     },
     {
-      "rakeFile": "rakewrappers/puppetdashboard.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/puppetdashboard/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/puppetdashboard/spec/reports",
@@ -255,8 +277,9 @@
       "name": "puppetdashboard"
     },
     {
-      "rakeFile": "rakewrappers/puppetdb.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/puppetdb/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/puppetdb/spec/reports",
@@ -266,8 +289,9 @@
       "name": "puppetdb"
     },
     {
-      "rakeFile": "rakewrappers/puppi.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/puppi/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/puppi/spec/reports",
@@ -277,8 +301,9 @@
       "name": "puppi"
     },
     {
-      "rakeFile": "rakewrappers/redis.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/redis/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/redis/spec/reports",
@@ -288,8 +313,9 @@
       "name": "redis"
     },
     {
-      "rakeFile": "rakewrappers/resolver.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/resolver/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/resolver/spec/reports",
@@ -299,8 +325,9 @@
       "name": "resolver"
     },
     {
-      "rakeFile": "rakewrappers/splunk.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/splunk/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/splunk/spec/reports",
@@ -310,8 +337,9 @@
       "name": "splunk"
     },
     {
-      "rakeFile": "rakewrappers/stdlib.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/stdlib/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/stdlib/spec/reports",
@@ -321,8 +349,9 @@
       "name": "stdlib"
     },
     {
-      "rakeFile": "rakewrappers/tftp.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/tftp/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/tftp/spec/reports",
@@ -332,8 +361,9 @@
       "name": "tftp"
     },
     {
-      "rakeFile": "rakewrappers/tomcat.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/tomcat/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/tomcat/spec/reports",
@@ -343,8 +373,9 @@
       "name": "tomcat"
     },
     {
-      "rakeFile": "rakewrappers/vsftpd.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/vsftpd/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/vsftpd/spec/reports",
@@ -354,8 +385,9 @@
       "name": "vsftpd"
     },
     {
-      "rakeFile": "rakewrappers/wget.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/wget/Rakefile",
+      "rakeTask": "spec",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/wget/spec/reports",
@@ -365,8 +397,9 @@
       "name": "wget"
     },
     {
-      "rakeFile": "rakewrappers/wordpress.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/wordpress/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/wordpress/spec/reports",
@@ -376,8 +409,9 @@
       "name": "wordpress"
     },
     {
-      "rakeFile": "rakewrappers/xinetd.rake",
-      "rakeTask": "default",
+      "rakeFile": "modules/xinetd/Rakefile",
+      "rakeTask": "test",
+      "reformatResults": true,
       "outputs": [
         {
           "location": "modules/xinetd/spec/reports",
