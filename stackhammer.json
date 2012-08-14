@@ -385,18 +385,6 @@
       "name": "vsftpd"
     },
     {
-      "rakeFile": "modules/wget/Rakefile",
-      "rakeTask": "spec",
-      "reformatResults": true,
-      "outputs": [
-        {
-          "location": "modules/wget/spec/reports",
-          "name": "wget module test results"
-        }
-      ],
-      "name": "wget"
-    },
-    {
       "rakeFile": "modules/wordpress/Rakefile",
       "rakeTask": "test",
       "reformatResults": true,
